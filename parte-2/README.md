@@ -14,7 +14,7 @@ I tool che ho utilizzato sono:
 
 Partiamo dalla struttura delle macchine. Su Hetzner cloud una VM con 2 virtual core , 4Gb di ram e 40Gb di disco costa esattamente:
 
-![Hetzner Price](/content/images/2018/09/Schermata-2018-09-15-alle-11.02.10.png)
+![Hetzner Price](https://www.nutellino.it/content/images/2018/09/Schermata-2018-09-15-alle-11.02.10.png)
 
 5.98 euro, praticamente te la regalano. Di queste macchine ne ho prese esattamente 10.
 
@@ -32,7 +32,7 @@ Hetzner cloud costa poco, ma da solamente un ip pubblico e nessuna possibilità 
 
 Prima di tutto, per poter agire via API su hetzner cloud, bisogna entrare nel proprio progetto, e creare la chiave API da usare:
 
-![Hetzner schermata](/content/images/2018/09/Schermata-2018-09-15-alle-11.09.30.png)
+![Hetzner schermata](https://www.nutellino.it/content/images/2018/09/Schermata-2018-09-15-alle-11.09.30.png)
 
 Diamo una descrizione alla nostra chiave e salviamola in un luogo sicuro.
 
@@ -42,7 +42,7 @@ Nel mio caso si trova in
 
 `cat .ssh/id_rsa.pub`
 
-![](/content/images/2018/09/Schermata-2018-09-15-alle-11.13.03.png)
+![](https://www.nutellino.it/content/images/2018/09/Schermata-2018-09-15-alle-11.13.03.png)
 
 Questa chiave, sopratutto il nome che avrà dovremo usarlo in terraform per aggiungere automaticamente la chiave nei server.
 
@@ -156,7 +156,7 @@ aws configure
 
 Con queste variabili stiamo indicando di agire sulla zona dns `XYZZZZZZZZZZ` , questo valore lo troviamo all'interno di amazon route 53 nelle informazioni delle hosted zones. `Hosted Zone ID`
 
-![](/content/images/2018/09/hostedzone.jpg)
+![](https://www.nutellino.it/content/images/2018/09/hostedzone.jpg)
 
 Definiamo inoltre quali pacchetti installare nei nodi durante il provisioning
 
