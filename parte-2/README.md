@@ -363,13 +363,16 @@ module "wireguard" {
 
 In questo modo invochiamo il modulo presente nella sottocartella `wireguard` passandogli come variabili di ingresso gli output delle altre definizioni. Notare come tutti gli ipv4 dei server sono stati concatenati in modo che gli ip abbiano un ordine definito.
 
-Vediamo ora un dettaglio del modulo wireguard che differisce rispetto alla repository `hobby-kube` linkata all'inizio dell'articolo.
+### APPROFONDIMENTO SULLA VPN
 
-### VPN
+In questa serie di guide, vedremo come installare kubernetes utilizzando Kubespray. Tramite Kubespray possiamo definire alcune variabili tra cui il CIDR della network del plugin utilizzato per la comunicazione intra cluster (nel nostro caso sarà flannel).
 
-In questa serie di guide, vedremo come installare kubernetes utilizzando Kubespray. Tramite Kubespray possiamo definire alcune variabili tra cui il CIDR della network del plugin utilizzato per la comunicazione intra cluster (nel nostro caso sarà flannel). Dobbiamo quindi andare ad inserire questa network nelle route che verranno impostate alla creazione delle interfacce. Dovremo inoltre definire la classe di IP da utilizzare per la nostra rete mesh.
+Per fare in modo che il traffico di rete passi tutto via VPN dobbiamo definire nel nostro modulo wireguard anche il CIDR della rete di Kubernetes.
 
-I due parametri si trovano nel file `wireguard/main.tf` e sono in dettaglio:
+I due parametri si trovano nel file `wireguard/main.tf` e sono:
+
+* overlay_cidr definisce la rete overlay che verrà creata da Kubernetes
+* vpn_iprange sono gli ip che verranno utilizzati per la creazione delle interfacce VPN
 
 ```tf
 variable "overlay_cidr" {
