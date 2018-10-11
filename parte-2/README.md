@@ -387,7 +387,7 @@ variable "vpn_iprange" {
 
 ### Lo script in azione!
 
-Proviamo ora a lanciare tutto quello che abbiamo preparato, alla fine di tutto dovremmo avere i nostri nodi pronti e configurati correttamente via dns.
+Proviamo ora a lanciare tutto quello che abbiamo preparato, alla fine di tutto dovremmo avere i nostri nodi pronti e configurati correttamente con il dns corretto associato e la rete vpn funzionante.
 
 [![asciicast](https://asciinema.org/a/8IrjhJYNXgTVIZxswg4egHwUs.png)](https://asciinema.org/a/8IrjhJYNXgTVIZxswg4egHwUs)
 
